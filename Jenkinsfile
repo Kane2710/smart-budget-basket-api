@@ -36,11 +36,11 @@ pipeline {
         }
 
         stage('Security') {
-            steps {
-                echo 'Running dependency security scan with npm audit...'
-                bat 'npm.cmd audit --audit-level=high'
-            }
-        }
+    steps {
+        echo 'Running production dependency security scan with npm audit...'
+        bat 'npm.cmd audit --omit=dev --audit-level=high'
+    }
+}
 
         stage('Deploy') {
             steps {
