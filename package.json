@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "start": "node src/app.js",
     "dev": "node src/app.js"
   },
@@ -17,6 +17,7 @@
     "express": "^5.2.1"
   },
   "devDependencies": {
+    "@sonar/scan": "^4.3.6",
     "jest": "^30.4.2",
     "supertest": "^7.2.2"
   }
